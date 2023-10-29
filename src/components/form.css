@@ -71,3 +71,61 @@
     margin-left: 300px;
     
 }
+
+.chat-box{
+    height: 50px;
+    top: 0px;
+    left:0px
+}
+
+.chat-content{
+    margin-top: 10%;
+    color: black;
+}
+.input-field{
+    height:50px;
+    width:600px;
+    left:20px;
+    margin-top: 5%;
+}
+
+.container{
+    /* margin-top: -400px; */
+    background-color:cornsilk;
+    height:100vh;
+    width:100%
+}
+
+.button{
+    height:50px;
+    width:100px;
+    background-color:darkcyan;
+    margin-left: 20px;
+}
+
+.content{
+    background-color:cadetblue;
+    max-width: 80%;
+    
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+  
+}
+
+.userName{
+    font-weight: bold;
+    font-size: medium;
+    text-align: left;
+    color: #555;
+}
+.chatMessage{
+    margin-top: 5px;
+  
+}
+
+.message{
+    width: 175%;
+    
+}
