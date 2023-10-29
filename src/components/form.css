@@ -73,52 +73,68 @@
 }
 
 .chat-box{
-    height: 50px;
-    top: 0px;
-    left:0px
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    position: fixed;
+    bottom: 0;
+ 
 }
 
 .chat-content{
-    margin-top: 10%;
+   
     color: black;
+    flex: 1; /* Content area takes available space and can scroll */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
 }
 .input-field{
     height:50px;
-    width:600px;
-    left:20px;
+    width:75%;
+    font-size: medium;
     margin-top: 5%;
+    flex: 1; /* Input field expands to fill available space */
+    padding: 5px;
 }
 
-.container{
-    /* margin-top: -400px; */
+.chat-room-container{
     background-color:cornsilk;
-    height:100vh;
-    width:100%
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .button{
-    height:50px;
+    height:55px;
     width:100px;
-    background-color:darkcyan;
-    margin-left: 20px;
+    background-color:#6c88c8;
+    font-size: medium;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    bottom: 2%;
+    margin-left: 76%;
+ 
 }
 
 .content{
-    background-color:cadetblue;
-    max-width: 80%;
-    
+    background-color:#6c88c8;
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
     display: inline-block;
-  
+    
+   
 }
 
 .userName{
     font-weight: bold;
     font-size: medium;
     text-align: left;
-    color: #555;
+    color:darkkhaki;
 }
 .chatMessage{
     margin-top: 5px;

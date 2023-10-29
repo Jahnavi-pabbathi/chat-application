@@ -17,9 +17,10 @@ export const RoomChat = () => {
     const [connected, setConnected] = useState(false)
 
     const onConnected = () => {
-
-        setConnected(true)
-        stompClient.subscribe('/chatroom/public', onPublicMessageReceived)
+      
+    
+        setConnected(true);
+        stompClient.subscribe('/chatroom/public', onPublicMessageReceived);
     }
 
     const onPublicMessageReceived = (payload) => {
@@ -72,11 +73,21 @@ export const RoomChat = () => {
     }, []);
 
     return (
-        <Grid container spacing={0} className="container">
-            <Grid item xs={3} style={{ backgroundColor: "#6c88c8" }} className="sidebar">
+        <Grid container spacing={0} className="chat-room-container">
+            <Grid item xs={2} style={{ backgroundColor: "#6c88c8" }} >
 
             </Grid>
-            <Grid item xs={9} style={{ backgroundColor: "lightgray" }}>
+            <Grid item xs={10} style={{ backgroundColor: "lightgray" }}>
+            <div className="chat-content">
+                    {publicChats.map((chat, index) => (
+                        <div key={index} className="message">
+                            <div className="content">
+                                <div className="userName">{userName}:</div>
+                                <div className="chatMessage">{chat.content}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 {connected ? (
                     <div className="chat-box">
                         <input
@@ -93,18 +104,7 @@ export const RoomChat = () => {
                 ) : (
                     navigate("/")
                 )}
-                <div className="chat-content">
-                    {publicChats.map((chat, index) => (
-                        <div key={index} className="message">
-                           
-                            
-                            <div className="content">
-                                <div className="userName">{userName}:</div>
-                                <div className="chatMessage">{chat.content}</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+               
             </Grid>
         </Grid>
 
